@@ -13,10 +13,67 @@ session_start(); //Initialize Session
   </head>
   <body>
 
-    <form action="newtodo.php" method="post">
-  		<input type="text" name="name" placeholder="What is your name?">
-      <input type="text" name="surname" placeholder="What is your surname?">
-       
+    <form action="[INSERT NEW FILE HERE].php" method="post">
+      <div class="group1">
+        <label for="name">What is your name?</label>
+  		   <input
+          type="text"
+          name="name" id="name"
+          placeholder="Joe"
+          autofocus required
+        >
+      </div>
+      <br>
+      <div class="group1">
+        <label for="surname">What is your surname?</label>
+        <input
+          type="text"
+          name="surname" id="surname"
+          placeholder="Blogs"
+          required
+        >
+      </div>
+      <br>
+      <div class="group1">
+        <label for="email">What is your email?</label>
+        <input
+          type="email"
+          name="email" id="email"
+          placeholder="joeblogs@emaildomain.com"
+          required
+        >
+      </div>
+      <br>
+      <div class="group1-inline">
+        <label for="checkIn">Check-in:</label>
+        <input
+          type="date"
+          name="checkIn" id="checkIn"
+          required
+        >
+      </div>
+      <div class="group1-inline">
+        <label for="checkOut">Check-out:</label>
+        <input
+          type="date"
+          name="checkOut" id="checkOut"
+          required
+        >
+      </div>
+      <div class="group1">
+        <label for="hotel">Hotel:</label>
+        <select
+          name="hotel" id="hotel"
+          required
+        >
+          <option value="empty">Choose a hotel</option>
+          <option value="marriot">Marriot</option>
+          <option value="hilton">Hilton</option>
+          <option value="parkIn">Park-in</option>
+          <option value="cityLodge">City Lodge</option>
+        </select>
+      </div>
+        <button type="submit">Submit</button>
     </form>
 
   </body>
