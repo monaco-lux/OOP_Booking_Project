@@ -15,7 +15,7 @@ session_start(); //Initialize Session
     <script src="/code/scripts.js"></script>
     <h1>Hotel Booking Form</h1>
     <hr>
-    <form action="code/newBooking.php" method="post">
+    <form action="newBooking.php" method="post">
       <div class="group1">
         <label for="name">What is your name?</label>
   		   <input
