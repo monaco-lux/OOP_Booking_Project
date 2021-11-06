@@ -10,6 +10,7 @@ session_start(); //Initialize Session
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hotel Booking Form</title>
     <link rel="stylesheet" href="code/stylesheet.css">
+    <script src="code/scripts.js"></script>
   </head>
   <body>
 
