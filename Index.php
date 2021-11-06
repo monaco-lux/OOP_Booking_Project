@@ -64,6 +64,8 @@ session_start(); //Initialize Session
       </div>
       <br>
       <br>
+      <br>
+      <br>
       <div class="group1">
         <label for="hotel">Hotel:</label>
         <select
