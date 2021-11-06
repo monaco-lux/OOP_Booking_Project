@@ -9,10 +9,12 @@ session_start(); //Initialize Session
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hotel Booking Form</title>
-  <!--  <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="code/stylesheet.css">
   </head>
   <body>
 
+    <h1>Hotel Booking Form</h1>
+    <hr>
     <form action="[INSERT NEW FILE HERE].php" method="post">
       <div class="group1">
         <label for="name">What is your name?</label>
@@ -60,6 +62,8 @@ session_start(); //Initialize Session
           required
         >
       </div>
+      <br>
+      <br>
       <div class="group1">
         <label for="hotel">Hotel:</label>
         <select
@@ -73,6 +77,9 @@ session_start(); //Initialize Session
           <option value="cityLodge">City Lodge</option>
         </select>
       </div>
+      <br>
+      <hr>
+      <br>
         <button type="submit">Submit</button>
     </form>
 
