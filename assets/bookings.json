@@ -1,3 +1,34 @@
 {
-  
+    "Mary booking": {
+        "name": "Mary",
+        "surname": "Blogs",
+        "email": "maryb@gmail.com",
+        "checkIn": "2021-11-19",
+        "checkOut": "2021-11-16",
+        "hotel": "cityLodge"
+    },
+    "Janet booking": {
+        "name": "Janet",
+        "surname": "Jackson",
+        "email": "janetj@gmail.com",
+        "checkIn": "2021-11-24",
+        "checkOut": "2021-11-18",
+        "hotel": "parkIn"
+    },
+    "ff1c08ed963df2e65931a1e328f27a80": {
+        "name": "Alexei",
+        "surname": "Stroganoff",
+        "email": "alexeis@gmail.com",
+        "checkIn": "2021-11-04",
+        "checkOut": "2021-11-25",
+        "hotel": "marriot"
+    },
+    "9fc26a5390d88bcf3c320d2f86d57193": {
+        "name": "Alexei",
+        "surname": "Nicolov",
+        "email": "alexein@outlook.com",
+        "checkIn": "2021-11-26",
+        "checkOut": "2021-11-19",
+        "hotel": "marriot"
+    }
 }

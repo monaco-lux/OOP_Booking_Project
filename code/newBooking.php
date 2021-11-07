@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 $name = $_POST['name'];
 $surname = $_POST['surname'];
@@ -14,20 +15,26 @@ $checkIn = trim($checkIn);
 $checkOut = trim($checkOut);
 $hotel = trim($hotel);
 
+$file = '../assets/bookings.json';
+$home = 'Location: ../index.php';
+
 if($name)
 {
-  if(file_exists('Location: ../assets/bookings.json'))
+  if(file_exists($file))
   {
-    $bookingJson[] = array("name"=>$name,"surname"=>$surname,"email"=>$email,
-    "checkIn"=>$checkIn,"checkOut"=>$checkOut,"hotel"=>$hotel);
+    $getBookingJson = file_get_contents($file);
+    $bookingJson = json_decode($getBookingJson, true);
   } else {
     {
       $bookingJson = [];
     }
   }
-  file_put_contents('Location: ../assets/bookings.json', json_encode($bookingJson, JSON_PRETTY_PRINT));
+
+  $bookingJson[session_id()] = ["name"=>$name,"surname"=>$surname,"email"=>$email,
+  "checkIn"=>$checkIn,"checkOut"=>$checkOut,"hotel"=>$hotel];
+  file_put_contents($file, json_encode($bookingJson, JSON_PRETTY_PRINT));
 }
 
-header('Location: ../index.php');
+header($home);
 
 ?>
