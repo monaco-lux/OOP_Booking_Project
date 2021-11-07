@@ -33,6 +33,7 @@ if($name)
   $bookingJson[session_id()] = ["name"=>$name,"surname"=>$surname,"email"=>$email,
   "checkIn"=>$checkIn,"checkOut"=>$checkOut,"hotel"=>$hotel];
   file_put_contents($file, json_encode($bookingJson, JSON_PRETTY_PRINT));
+
 }
 
 header($home);

@@ -30,5 +30,13 @@
         "checkIn": "2021-11-26",
         "checkOut": "2021-11-19",
         "hotel": "marriot"
+    },
+    "77c45ae95dd7c9e5f994334f0e2b4610": {
+        "name": "Sergei",
+        "surname": "Alexnov",
+        "email": "sergeia@pm.me",
+        "checkIn": "2021-11-26",
+        "checkOut": "2021-12-02",
+        "hotel": "marriot"
     }
 }
