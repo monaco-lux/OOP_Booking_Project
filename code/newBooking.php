@@ -16,18 +16,18 @@ $hotel = trim($hotel);
 
 if($name)
 {
-  if(file_exists('Location: assets/booking.json'))
+  if(file_exists('Location: ../assets/bookings.json'))
   {
-    $bookingJson = file_get_contents('Location: code/booking.json');
-    $bookingJson = json_decode($bookingJson, true);
+    $bookingJson[] = array("name"=>$name,"surname"=>$surname,"email"=>$email,
+    "checkIn"=>$checkIn,"checkOut"=>$checkOut,"hotel"=>$hotel);
   } else {
     {
       $bookingJson = [];
     }
   }
-  file_put_contents('Location: code/booking.json', json_encode($bookingJson, JSON_PRETTY_PRINT));
+  file_put_contents('Location: ../assets/bookings.json', json_encode($bookingJson, JSON_PRETTY_PRINT));
 }
 
-header
+header('Location: ../index.php');
 
 ?>
