@@ -1,28 +1,23 @@
 <?php
 session_start();
+include "classes.php";
 
-$name = $_POST['name'];
-$surname = $_POST['surname'];
-$email = $_POST['email'];
-$checkIn = $_POST['checkIn'];
-$checkOut = $_POST['checkOut'];
-$hotel = $_POST['hotel'];
+$newBooking = new BookingForm();
+$newBook->__set("name",trim($_POST['name']));
+$newBook->__set("surname",trim($_POST['surname']));
+$newBook->__set("email",trim($_POST['email']));
+$newBook->__set("checkIn",trim($_POST['checkIn']));
+$newBook->__set("checkOut",trim($_POST['checkOut']));
+$newBook->__set("hotel",trim($_POST['hotel']));
+$newBook->__set("file","../assets/bookings.json");
+$newBook->__set("home","Location: ../index.php");
 
-$name = trim($name);
-$surname = trim($surname);
-$email = trim($email);
-$checkIn = trim($checkIn);
-$checkOut = trim($checkOut);
-$hotel = trim($hotel);
 
-$file = '../assets/bookings.json';
-$home = 'Location: ../index.php';
-
-if($name)
+if($newBook->__get("name"))
 {
-  if(file_exists($file))
+  if(file_exists($newBook->__get("file"))
   {
-    $getBookingJson = file_get_contents($file);
+    $getBookingJson = file_get_contents($newBook->__get("file"));
     $bookingJson = json_decode($getBookingJson, true);
   } else {
     {
@@ -30,12 +25,12 @@ if($name)
     }
   }
 
-  $bookingJson[session_id()] = ["name"=>$name,"surname"=>$surname,"email"=>$email,
-  "checkIn"=>$checkIn,"checkOut"=>$checkOut,"hotel"=>$hotel];
-  file_put_contents($file, json_encode($bookingJson, JSON_PRETTY_PRINT));
+  $bookingJson[session_id()] = ["name"=>$newBook->__get("name"),"surname"=>$newBook->__get("surname"),"email"=>$newBook->__get("email"),
+  "checkIn"=>$newBook->__get("checkIn"),"checkOut"=>$newBook->__get("checkOut"),"hotel"=>$newBook->__get("hotel")];
+  file_put_contents($newBook->__get("file"), json_encode($bookingJson, JSON_PRETTY_PRINT));
 
 }
 
-header($home);
+header($newBook->__get("home"));
 
 ?>
