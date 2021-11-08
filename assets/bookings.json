@@ -1,42 +1,29 @@
 {
-    "Mary booking": {
-        "name": "Mary",
-        "surname": "Blogs",
-        "email": "maryb@gmail.com",
-        "checkIn": "2021-11-19",
-        "checkOut": "2021-11-16",
-        "hotel": "cityLodge"
+    "1da230193846a52d566b5a0ea3e1beba": {
+        "name": "Joe",
+        "surname": "Goldberg",
+        "email": "jog@email.com",
+        "checkIn": "2021-11-03",
+        "checkOut": "2021-11-10",
+        "hotel": "hilton",
+        "session": "1da230193846a52d566b5a0ea3e1beba"
     },
-    "Janet booking": {
-        "name": "Janet",
-        "surname": "Jackson",
-        "email": "janetj@gmail.com",
-        "checkIn": "2021-11-24",
-        "checkOut": "2021-11-18",
-        "hotel": "parkIn"
+    "Kingston booking": {
+        "name": "Kingston",
+        "surname": "Laxatived",
+        "email": "kingston@email.com",
+        "checkIn": "2021-11-16",
+        "checkOut": "2021-11-23",
+        "hotel": "parkIn",
+        "session": "1da230193846a52d566b5a0ea3e1beba"
     },
-    "ff1c08ed963df2e65931a1e328f27a80": {
-        "name": "Alexei",
-        "surname": "Stroganoff",
-        "email": "alexeis@gmail.com",
-        "checkIn": "2021-11-04",
-        "checkOut": "2021-11-25",
-        "hotel": "marriot"
-    },
-    "9fc26a5390d88bcf3c320d2f86d57193": {
-        "name": "Alexei",
-        "surname": "Nicolov",
-        "email": "alexein@outlook.com",
-        "checkIn": "2021-11-26",
-        "checkOut": "2021-11-19",
-        "hotel": "marriot"
-    },
-    "77c45ae95dd7c9e5f994334f0e2b4610": {
-        "name": "Sergei",
-        "surname": "Alexnov",
-        "email": "sergeia@pm.me",
-        "checkIn": "2021-11-26",
-        "checkOut": "2021-12-02",
-        "hotel": "marriot"
+    "1d562d9969eff7e1a62a3d183f8b7a05": {
+        "name": "Jennifer",
+        "surname": "Peter",
+        "email": "jennip@gmail.com",
+        "checkIn": "2021-11-12",
+        "checkOut": "2021-11-17",
+        "hotel": "marriot",
+        "session": "1d562d9969eff7e1a62a3d183f8b7a05"
     }
 }

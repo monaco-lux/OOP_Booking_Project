@@ -1,5 +1,6 @@
 <?php
 
+// Used to provide properties to write back to a JSON
 class BookingForm
 {
 
@@ -23,8 +24,6 @@ class BookingForm
       if (property_exists($this, $property)) {
         $this->$property = $value;
       }
-
-      return $this;
     }
 
 }

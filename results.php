@@ -1,0 +1,57 @@
+<?php
+session_start(); //Initialize Session
+include "code/classes.php";
+
+$confirmationObj = new BookingForm();
+$confirmationObj->file = "assets/bookings.json";
+
+if(file_exists($confirmationObj->file))
+{
+  $getBookingJson = file_get_contents($confirmationObj->file);
+  $bookingJson = json_decode($getBookingJson, true);
+} else {
+  $bookingJson = "Did not pull data";
+}
+// figure out how to unset session on this page!
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Results and Comparison Page</title>
+    <link rel="stylesheet" href="code/resultsstylesheet.css">
+  </head>
+  <body>
+   <h1>Results of Booking</h1>
+    <hr>
+    <table>
+      <thead>
+        <th>Full Name</th>
+        <th>Email</th>
+        <th>Check-in and Check-out</th>
+        <th>Hotel</th>
+      </thead>
+      <tbody>
+    <?php
+      foreach($bookingJson as $bookingOutput) :
+        if($bookingOutput['session'] == session_id())
+        {
+    ?>
+        <tr>
+          <td><?php echo $bookingOutput['name']." ".$bookingOutput['surname'];?></td>
+          <td><?php echo $bookingOutput['email']; ?></td>
+          <td><?php echo $bookingOutput['checkIn']." -> ".$bookingOutput['checkOut'];?></td>
+          <td><?php echo $bookingOutput['hotel'];?></td>
+        </tr>
+    <?php
+        }
+      endforeach;
+    ?>
+      <tbody>
+      </thead>
+    </table>
+  </body>
+</html>
