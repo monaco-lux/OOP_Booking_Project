@@ -15,7 +15,7 @@ $newBook->__set("home","Location: ../index.php");
 
 if($newBook->__get("name"))
 {
-  if(file_exists($newBook->__get("file"))
+  if(file_exists($newBook->__get("file")))
   {
     $getBookingJson = file_get_contents($newBook->__get("file"));
     $bookingJson = json_decode($getBookingJson, true);
@@ -25,9 +25,17 @@ if($newBook->__get("name"))
     }
   }
 
-  $bookingJson[session_id()] = ["name"=>$newBook->__get("name"),"surname"=>$newBook->__get("surname"),"email"=>$newBook->__get("email"),
-  "checkIn"=>$newBook->__get("checkIn"),"checkOut"=>$newBook->__get("checkOut"),"hotel"=>$newBook->__get("hotel")];
-  file_put_contents($newBook->__get("file"), json_encode($bookingJson, JSON_PRETTY_PRINT));
+
+  $bookingJson[session_id()] =
+  [
+    "name"=>$newBook->__get("name"),
+    "surname"=>$newBook->__get("surname"),
+    "email"=>$newBook->__get("email"),
+    "checkIn"=>$newBook->__get("checkIn"),
+    "checkOut"=>$newBook->__get("checkOut"),
+    "hotel"=>$newBook->__get("hotel")
+  ];
+  file_put_contents($newBook->__get("file"),json_encode($bookingJson, JSON_PRETTY_PRINT));
 
 }
 
