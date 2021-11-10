@@ -73,10 +73,10 @@ session_start(); //Initialize Session
           required
         >
           <option value="empty">Choose a hotel</option>
-          <option value="marriot">Marriot</option>
-          <option value="hilton">Hilton</option>
-          <option value="parkIn">Park-in</option>
-          <option value="cityLodge">City Lodge</option>
+          <option value="Marriot">Marriot</option>
+          <option value="Hilton">Hilton</option>
+          <option value="ParkIn">Park-In</option>
+          <option value="CityLodge">City Lodge</option>
         </select>
       </div>
       <br>
