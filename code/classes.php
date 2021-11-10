@@ -9,7 +9,11 @@ class BookingForm
   private $email;
   private $checkIn;
   private $checkOut;
+  private $checkInStr;
+  private $checkOutStr;
   private $hotel;
+  private $daysStaying;
+  private $ratePerDay;
 
   private $file;
   private $home;

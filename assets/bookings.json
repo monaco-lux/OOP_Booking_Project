@@ -25,5 +25,15 @@
         "checkOut": "2021-11-17",
         "hotel": "marriot",
         "session": "1d562d9969eff7e1a62a3d183f8b7a05"
+    },
+    "186b291e3857ae39472e7a4c934777e4": {
+        "name": "Anna",
+        "surname": "Karenina",
+        "email": "annak@gmail.com",
+        "checkIn": "2021-11-11",
+        "checkOut": "2021-11-17",
+        "daysStaying": 6,
+        "hotel": "marriot",
+        "session": "186b291e3857ae39472e7a4c934777e4"
     }
 }
