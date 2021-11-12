@@ -27,13 +27,23 @@
         "session": "1d562d9969eff7e1a62a3d183f8b7a05"
     },
     "186b291e3857ae39472e7a4c934777e4": {
-        "name": "Anna",
-        "surname": "Karenina",
-        "email": "annak@gmail.com",
-        "checkIn": "2021-11-11",
+        "name": "explodeJackson",
+        "surname": "Kingston",
+        "email": "explode@gamil.com",
+        "checkIn": "2021-11-10",
         "checkOut": "2021-11-17",
-        "daysStaying": 6,
-        "hotel": "marriot",
+        "daysStaying": 7,
+        "hotel": "Marriot",
         "session": "186b291e3857ae39472e7a4c934777e4"
+    },
+    "58fa09d03013b379ebc417f203ea121f": {
+        "name": "Jenny",
+        "surname": "Hansen",
+        "email": "jenny@gmail.com",
+        "checkIn": "2021-11-12",
+        "checkOut": "2021-11-19",
+        "daysStaying": 7,
+        "hotel": "Marriot",
+        "session": "58fa09d03013b379ebc417f203ea121f"
     }
 }

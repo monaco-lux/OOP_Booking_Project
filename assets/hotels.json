@@ -1,17 +1,17 @@
 {
-    "marriot": {
+    "Marriot": {
         "hotel":"Marriot",
         "dailyRate": 250
     },
-    "hilton": {
+    "Hilton": {
         "hotel":"Hilton",
         "dailyRate": 300
     },
-    "parkIn": {
+    "ParkIn": {
         "hotel":"ParkIn",
         "dailyRate": 120
     },
-    "cityLodge": {
+    "CityLodge": {
         "hotel":"CityLodge",
         "dailyRate": 100
     }

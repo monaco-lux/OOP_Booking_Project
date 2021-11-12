@@ -32,4 +32,26 @@ class BookingForm
 
 }
 
+class HotelValues
+{
+
+  private $hotel;
+  private $rate;
+  private $file;
+
+  public function __get($property) {
+    if (property_exists($this, $property)) {
+      return $this->$property;
+    }
+  }
+
+  public function __set($property, $value) {
+      if (property_exists($this, $property)) {
+        $this->$property = $value;
+      }
+    }
+
+}
+
+
  ?>
