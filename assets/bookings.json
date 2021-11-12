@@ -37,14 +37,39 @@
         "session": "186b291e3857ae39472e7a4c934777e4"
     },
     "58fa09d03013b379ebc417f203ea121f": {
-        "name": "James",
-        "surname": "Kelly",
-        "email": "Jamesk@gmail.com",
+        "name": "Kingly",
+        "surname": "Merriweather",
+        "email": "kmerri@google.comq",
         "checkIn": "2021-11-19",
-        "checkOut": "2021-11-26",
-        "hotel": null,
+        "checkOut": "2021-11-30",
+        "hotel": "Hilton",
+        "daysStaying": "11",
+        "ratePerDay": "300",
+        "total": "3300",
+        "session": "58fa09d03013b379ebc417f203ea121f"
+    },
+    "d1e68e4122e02b3a453c9bf525d3e4af": {
+        "name": "Sarah",
+        "surname": "JAckson",
+        "email": "Saraj@gmail.co.za",
+        "checkIn": "2021-11-12",
+        "checkOut": "2021-11-19",
+        "hotel": "Hilton",
         "daysStaying": "7",
         "ratePerDay": "300",
-        "total": "2100"
+        "total": "2100",
+        "session": "d1e68e4122e02b3a453c9bf525d3e4af"
+    },
+    "e4f6fd83ce434183d6076d8f97f722fd": {
+        "name": "King",
+        "surname": "Jackson",
+        "email": "kingj@blogspot.com",
+        "checkIn": "2021-11-11",
+        "checkOut": "2021-11-18",
+        "hotel": "CityLodge",
+        "daysStaying": "7",
+        "ratePerDay": "100",
+        "total": "700",
+        "session": "e4f6fd83ce434183d6076d8f97f722fd"
     }
 }
