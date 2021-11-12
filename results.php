@@ -95,6 +95,7 @@ if(isset($_POST['confirmOptionCompare']))
           </td>
           <td>
             <form action="code/updateBooking.php" method="post">
+              <input type="hidden" id="original" name="original" value="yes">
               <button type-type="submit">Book</button>
             </form>
           </td>
@@ -110,6 +111,5 @@ if(isset($_POST['confirmOptionCompare']))
       <p>Alternatively, you can compare to other options available:</p>
       <button type="submit" name="confirm">Compare</button>
     </form>
-    <?php var_dump($bookingJson[session_id()]); ?>
   </body>
 </html>

@@ -6,16 +6,6 @@ $updateBook = new BookingForm();
 $updateBook->file = "../assets/bookings.json";
 $updateBook->home = "Location: ../results.php";
 
-if(file_exists($updateBook->file))
-{
-  $getBookingJson = file_get_contents($updateBook->file);
-  $bookingJson = json_decode($getBookingJson, true);
-} else {
-  {
-    $bookingJson = [];
-  }
-}
-
 $original = $_POST['original'];
 if($original == "yes")
 {
@@ -23,6 +13,16 @@ if($original == "yes")
   die();
 } else
 {
+  if(file_exists($updateBook->file))
+  {
+    $getBookingJson = file_get_contents($updateBook->file);
+    $bookingJson = json_decode($getBookingJson, true);
+  } else {
+    {
+      $bookingJson = [];
+    }
+  }
+
   $updateBook->hotel = $_POST['hotel'];
   $updateBook->daysStaying = $_POST['daysStaying'];
   $updateBook->ratePerDay = $_POST['dailyRate'];
@@ -39,7 +39,7 @@ if($original == "yes")
   "daysStaying"=>$updateBook->daysStaying,
   "ratePerDay"=>$updateBook->ratePerDay,
   "total"=>$total,
-  "session"=>$bookingJson[session_id()]['session'];
+  "session"=>$bookingJson[session_id()]['session']
   ];
   file_put_contents($updateBook->file,json_encode($bookingJson, JSON_PRETTY_PRINT));
   header($updateBook->home);
