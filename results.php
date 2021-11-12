@@ -78,17 +78,23 @@ if(isset($_POST['confirmOptionCompare']))
               echo "R".$bookingOutput['dailyRate'];
             } else
             {
-              echo "R".$dailyRate
+              echo "R".$dailyRate;
             }
             ?>
           </td>
           <td>
             <?php
-            echo $confirmationObj->ratePerDay;
+            if (isset($bookingOuput['total']))
+            {
+              echo $bookingOutput['total'];
+            } else
+            {
+              echo $confirmationObj->ratePerDay;
+            }
             ?>
           </td>
           <td>
-            <form action="bookResult.php" method="post">
+            <form action="code/updateBooking.php" method="post">
               <button type-type="submit">Book</button>
             </form>
           </td>
@@ -104,5 +110,6 @@ if(isset($_POST['confirmOptionCompare']))
       <p>Alternatively, you can compare to other options available:</p>
       <button type="submit" name="confirm">Compare</button>
     </form>
+    <?php var_dump($bookingJson[session_id()]); ?>
   </body>
 </html>

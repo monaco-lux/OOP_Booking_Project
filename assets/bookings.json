@@ -37,13 +37,14 @@
         "session": "186b291e3857ae39472e7a4c934777e4"
     },
     "58fa09d03013b379ebc417f203ea121f": {
-        "name": "Jack",
-        "surname": "Newman",
-        "email": "jackn@blog.co.za",
-        "checkIn": "2021-11-12",
-        "checkOut": "2021-11-19",
-        "daysStaying": 7,
-        "hotel": "Hilton",
-        "session": "58fa09d03013b379ebc417f203ea121f"
+        "name": "James",
+        "surname": "Kelly",
+        "email": "Jamesk@gmail.com",
+        "checkIn": "2021-11-19",
+        "checkOut": "2021-11-26",
+        "hotel": null,
+        "daysStaying": "7",
+        "ratePerDay": "300",
+        "total": "2100"
     }
 }
