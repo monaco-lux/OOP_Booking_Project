@@ -69,7 +69,7 @@ $dailyRate = $valueHotel[$bookingJson[session_id()]['hotel']]['dailyRate'];
           <td><?php echo "R".$dailyRate ?></td>
           <td><?php echo $confirmationObj->ratePerDay; ?></td>
           <td>
-            <form action="bookResult.php" method="post">
+            <form action="code/updateBooking.php" method="post">
               <input type="hidden" id="original" name="original" value="yes">
               <button type-type="submit">Book</button>
             </form>
@@ -97,7 +97,7 @@ $dailyRate = $valueHotel[$bookingJson[session_id()]['hotel']]['dailyRate'];
         if($bookingJson[session_id()]['hotel'] != $hotelOutput['hotel'])
         {
     ?>
-    <form action="bookResult.php" method="post">
+    <form action="code/updateBooking.php" method="post">
       <tr>
         <td>
           <?php echo $hotelOutput['hotel'];?>

@@ -71,8 +71,22 @@ if(isset($_POST['confirmOptionCompare']))
           <td><?php echo $bookingOutput['checkIn']." -> ".$bookingOutput['checkOut'];?></td>
           <td><?php echo $bookingOutput['daysStaying']; ?></td>
           <td><?php echo $bookingOutput['hotel'];?></td>
-          <td><?php echo "R".$dailyRate ?></td>
-          <td><?php echo $confirmationObj->ratePerDay; ?></td>
+          <td>
+            <?php
+            if (isset($bookingOuput['dailyRate']))
+            {
+              echo "R".$bookingOutput['dailyRate'];
+            } else
+            {
+              echo "R".$dailyRate
+            }
+            ?>
+          </td>
+          <td>
+            <?php
+            echo $confirmationObj->ratePerDay;
+            ?>
+          </td>
           <td>
             <form action="bookResult.php" method="post">
               <button type-type="submit">Book</button>
