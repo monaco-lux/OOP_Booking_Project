@@ -27,11 +27,6 @@ if(file_exists($hotelThings->file))
 $confirmationObj->ratePerDay = "R".($bookingJson[session_id()]['daysStaying'] * $valueHotel[$bookingJson[session_id()]['hotel']]['dailyRate']);
 $dailyRate = $valueHotel[$bookingJson[session_id()]['hotel']]['dailyRate'];
 
-if(isset($_POST['confirmOptionCompare']))
-{
-  header("location: comparison.php");
-  die();
-}
 // figure out how to unset session on this page!
 ?>
 
@@ -41,13 +36,13 @@ if(isset($_POST['confirmOptionCompare']))
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Results and Comparison Page</title>
+    <title>Comparison Page</title>
     <link rel="stylesheet" href="code/resultsstylesheet.css">
   </head>
   <body>
-   <h1>Results of Booking</h1>
+   <h1>Comparison Page</h1>
     <hr>
-    <h2>You are booking...</h2>
+    <h2>Comparison Options</h2>
     <table>
       <thead>
         <th>Full Name</th>
@@ -75,6 +70,7 @@ if(isset($_POST['confirmOptionCompare']))
           <td><?php echo $confirmationObj->ratePerDay; ?></td>
           <td>
             <form action="bookResult.php" method="post">
+              <input type="hidden" id="original" name="original" value="yes">
               <button type-type="submit">Book</button>
             </form>
           </td>
@@ -86,9 +82,48 @@ if(isset($_POST['confirmOptionCompare']))
       <tbody>
       </thead>
     </table>
-    <form action="comparison.php" method="post" id="confirmForm">
-      <p>Alternatively, you can compare to other options available:</p>
-      <button type="submit" name="confirm">Compare</button>
+    <h3>Comparison Options</h3>
+    <table>
+      <thead>
+        <th>Hotel</th>
+        <th>Days Staying</th>
+        <th>Daily Rate</th>
+        <th>Total to Pay</th>
+        <th>Book this?</th>
+      </thead>
+      <tbody>
+    <?php
+      foreach($valueHotel as $hotelOutput) :
+        if($bookingJson[session_id()]['hotel'] != $hotelOutput['hotel'])
+        {
+    ?>
+    <form action="bookResult.php" method="post">
+      <tr>
+        <td>
+          <?php echo $hotelOutput['hotel'];?>
+          <input type="hidden" id="hotelBook" name="hotelBook" value=<?php echo $hotelOutput['hotel'];?>>
+        </td>
+        <td>
+          <?php echo $bookingJson[session_id()]['daysStaying'];?>
+          <input type="hidden" id="daysStaying" name="daysStaying" value=<?php echo $bookingJson[session_id()]['daysStaying'];?>>
+        </td>
+        <td>
+          <?php echo "R".$hotelOutput['dailyRate']; ?>
+          <input type="hidden" id="dailyRate" name="dailyRate" value=<?php echo $hotelOutput['dailyRate'];?>>
+        </td>
+        <td>
+          <?php echo "R".$bookingJson[session_id()]['daysStaying'] * $hotelOutput['dailyRate']; ?>
+          <input type="hidden" id="total" name="total" value=<?php echo $bookingJson[session_id()]['daysStaying'] * $hotelOutput['dailyRate'];?>>
+        </td>
+        <td>
+          <input type="hidden" id="original" name="original" value="no">
+          <button type-type="submit">Book</button>
+        </td>
+      <tr>
     </form>
+    <?php
+        }
+      endforeach;
+    ?>
   </body>
 </html>

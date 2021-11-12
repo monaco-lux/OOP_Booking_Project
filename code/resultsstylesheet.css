@@ -1,4 +1,12 @@
 td, th {
-  border: 1px solid #999;
+  border: 3px solid #999;
   padding: 0.5rem;
+}
+
+div.groupForm
+{
+  width: 49%;
+ display: inline-block;
+ float: left;
+ margin-left: 1%;
 }
