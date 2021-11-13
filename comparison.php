@@ -42,7 +42,7 @@ $dailyRate = $valueHotel[$bookingJson[session_id()]['hotel']]['dailyRate'];
   <body>
    <h1>Comparison Page</h1>
     <hr>
-    <h2>Comparison Options</h2>
+    <h2>Original Choice</h2>
     <table>
       <thead>
         <th>Full Name</th>
@@ -89,7 +89,7 @@ $dailyRate = $valueHotel[$bookingJson[session_id()]['hotel']]['dailyRate'];
         <th>Days Staying</th>
         <th>Daily Rate</th>
         <th>Total to Pay</th>
-        <th>Book this?</th>
+        <th>Change values?</th>
       </thead>
       <tbody>
     <?php
@@ -117,7 +117,7 @@ $dailyRate = $valueHotel[$bookingJson[session_id()]['hotel']]['dailyRate'];
         </td>
         <td>
           <input type="hidden" id="original" name="original" value="no">
-          <button type-type="submit">Book</button>
+          <button type-type="submit">Select</button>
         </td>
       <tr>
     </form>
