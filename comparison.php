@@ -2,6 +2,8 @@
 session_start(); //Initialize Session
 include "code/classes.php";
 
+// this section of code in the header is repeated from results.php
+
 $confirmationObj = new BookingForm();
 $confirmationObj->file = "assets/bookings.json";
 
@@ -27,7 +29,7 @@ if(file_exists($hotelThings->file))
 $confirmationObj->ratePerDay = "R".($bookingJson[session_id()]['daysStaying'] * $valueHotel[$bookingJson[session_id()]['hotel']]['dailyRate']);
 $dailyRate = $valueHotel[$bookingJson[session_id()]['hotel']]['dailyRate'];
 
-// figure out how to unset session on this page!
+
 ?>
 
 <!DOCTYPE html>
@@ -93,6 +95,7 @@ $dailyRate = $valueHotel[$bookingJson[session_id()]['hotel']]['dailyRate'];
       </thead>
       <tbody>
     <?php
+      // below looks complicated but its just to show hotel outputs from json
       foreach($valueHotel as $hotelOutput) :
         if($bookingJson[session_id()]['hotel'] != $hotelOutput['hotel'])
         {

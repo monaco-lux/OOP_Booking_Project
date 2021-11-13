@@ -24,6 +24,7 @@ if(file_exists($hotelThings->file))
   $valueHotel = "Did not pull data";
 }
 
+// below is to calculate totals and to get the daily rate of the hotel
 $confirmationObj->ratePerDay = "R".($bookingJson[session_id()]['daysStaying'] * $valueHotel[$bookingJson[session_id()]['hotel']]['dailyRate']);
 $dailyRate = $valueHotel[$bookingJson[session_id()]['hotel']]['dailyRate'];
 

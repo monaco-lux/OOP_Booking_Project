@@ -16,7 +16,7 @@ session_start(); //Initialize Session
     <h1>Hotel Booking Form</h1>
     <hr>
     <form action="code/newBooking.php" method="post">
-      <div class="group1">
+      <div class="group1"> <?php // used to ensure consistent style ?>
         <label for="name">What is your name?</label>
   		   <input
           type="text"
@@ -46,7 +46,7 @@ session_start(); //Initialize Session
         >
       </div>
       <br>
-      <div class="group1-inline">
+      <div class="group1-inline"> <?php // makes sure dates can be put next to each other ?>
         <label for="checkIn">Check-in:</label>
         <input
           type="date"

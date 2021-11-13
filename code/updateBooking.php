@@ -17,7 +17,7 @@ if(file_exists($updateBook->file))
   }
 }
 
-
+// if it comes from the original data (not comparison) it will execute an email send
 $original = $_POST['original'];
 if($original == "yes")
 {
@@ -47,11 +47,13 @@ if($original == "yes")
 
   mail($to,$subject,$body,'From: ');
   mail($from,$subject2,$body2,"From: ");
+  // reset id and go back to the form input
   session_regenerate_id();
   header($restart);
   die();
 } else
 {
+  // else it will write back to the json and go back to results.php
   $updateBook->hotel = $_POST['hotel'];
   $updateBook->daysStaying = $_POST['daysStaying'];
   $updateBook->ratePerDay = $_POST['dailyRate'];
