@@ -27,12 +27,6 @@ if(file_exists($hotelThings->file))
 $confirmationObj->ratePerDay = "R".($bookingJson[session_id()]['daysStaying'] * $valueHotel[$bookingJson[session_id()]['hotel']]['dailyRate']);
 $dailyRate = $valueHotel[$bookingJson[session_id()]['hotel']]['dailyRate'];
 
-if(isset($_POST['confirmOptionCompare']))
-{
-  header("location: comparison.php");
-  die();
-}
-// figure out how to unset session on this page!
 ?>
 
 <!DOCTYPE html>
