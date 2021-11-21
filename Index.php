@@ -9,65 +9,53 @@ session_start(); //Initialize Session
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hotel Booking Form</title>
-    <link rel="stylesheet" href="code/stylesheet.css">
+    <!-- <link rel="stylesheet" href="code/stylesheet.css"> -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   </head>
   <body>
     <script src="/code/scripts.js"></script>
     <h1>Hotel Booking Form</h1>
     <hr>
-    <form action="code/newBooking.php" method="post">
-      <div class="group1"> <?php // used to ensure consistent style ?>
-        <label for="name">What is your name?</label>
+    <form action="code/newBooking.php" method="post" class="w3-container">
+      <label for="name">What is your name?</label>
   		   <input
           type="text"
           name="name" id="name"
           placeholder="Joe"
           autofocus required
+          class="w3-input w3-border w3-round"
         >
-      </div>
-      <br>
-      <div class="group1">
-        <label for="surname">What is your surname?</label>
+      <label for="surname">What is your surname?</label>
         <input
           type="text"
           name="surname" id="surname"
           placeholder="Blogs"
           required
+          class="w3-input w3-border w3-round"
         >
-      </div>
-      <br>
-      <div class="group1">
-        <label for="email">What is your email?</label>
+      <label for="email" >What is your email?</label>
         <input
           type="email"
           name="email" id="email"
           placeholder="joeblogs@emaildomain.com"
           required
+          class="w3-input w3-border w3-round"
         >
-      </div>
       <br>
-      <div class="group1-inline"> <?php // makes sure dates can be put next to each other ?>
-        <label for="checkIn">Check-in:</label>
+      <br>
+      <label for="checkIn">Check-in:</label>
         <input
           type="date"
           name="checkIn" id="checkIn"
           required
         >
-      </div>
-      <div class="group1-inline">
-        <label for="checkOut">Check-out:</label>
+      <label for="checkOut">Check-out:</label>
         <input
           type="date"
           name="checkOut" id="checkOut"
           required
         >
-      </div>
-      <br>
-      <br>
-      <br>
-      <br>
-      <div class="group1">
-        <label for="hotel">Hotel:</label>
+      <label for="hotel">Hotel:</label>
         <select
           name="hotel" id="hotel"
           required
@@ -78,11 +66,7 @@ session_start(); //Initialize Session
           <option value="ParkIn">Park-In</option>
           <option value="CityLodge">City Lodge</option>
         </select>
-      </div>
-      <br>
-      <hr>
-      <br>
-        <button type="submit">Submit</button>
+      <button type="submit" class="w3-button w3-black">Submit</button>
     </form>
   </body>
 </html>

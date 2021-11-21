@@ -39,30 +39,33 @@ $dailyRate = $valueHotel[$bookingJson[session_id()]['hotel']]['dailyRate'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Comparison Page</title>
-    <link rel="stylesheet" href="code/resultsstylesheet.css">
+    <!-- <link rel="stylesheet" href="code/resultsstylesheet.css"> -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   </head>
   <body>
    <h1>Comparison Page</h1>
     <hr>
     <h2>Original Choice</h2>
-    <table>
-      <thead>
-        <th>Full Name</th>
-        <th>Email</th>
-        <th>Check-in and Check-out</th>
-        <th>Days Staying</th>
-        <th>Hotel</th>
-        <th>Daily Rate</th>
-        <th>Total to Pay</th>
-        <th>Book this?</th>
-      </thead>
+    <div class="w3-responsive">
+      <table class="w3-table-all">
+        <thead>
+          <th>Full Name</th>
+          <th>Email</th>
+          <th>Check-in and Check-out</th>
+          <th>Days Staying</th>
+          <th>Hotel</th>
+          <th>Daily Rate</th>
+          <th>Total to Pay</th>
+          <th>Book this?</th>
+        </thead>
       <tbody>
+    </div>
     <?php
       foreach($bookingJson as $bookingOutput) :
         if($bookingOutput['session'] == session_id())
         {
     ?>
-        <tr>
+        <tr class="w3-hover-purple">
           <td><?php echo $bookingOutput['name']." ".$bookingOutput['surname'];?></td>
           <td><?php echo $bookingOutput['email']; ?></td>
           <td><?php echo $bookingOutput['checkIn']." -> ".$bookingOutput['checkOut'];?></td>
@@ -73,7 +76,7 @@ $dailyRate = $valueHotel[$bookingJson[session_id()]['hotel']]['dailyRate'];
           <td>
             <form action="code/updateBooking.php" method="post">
               <input type="hidden" id="original" name="original" value="yes">
-              <button type-type="submit">Book</button>
+              <button type-type="submit" class="w3-button w3-black">Book</button>
             </form>
           </td>
         </tr>
@@ -85,16 +88,18 @@ $dailyRate = $valueHotel[$bookingJson[session_id()]['hotel']]['dailyRate'];
       </thead>
     </table>
     <h3>Comparison Options</h3>
-    <table>
-      <thead>
-        <th>Hotel</th>
-        <th>Days Staying</th>
-        <th>Features</th>
-        <th>Daily Rate</th>
-        <th>Total to Pay</th>
-        <th>Change values?</th>
-      </thead>
+    <div class="w3-responsive">
+      <table class="w3-table-all">
+        <thead>
+          <th>Hotel</th>
+          <th>Days Staying</th>
+          <th>Features</th>
+          <th>Daily Rate</th>
+          <th>Total to Pay</th>
+          <th>Change values?</th>
+        </thead>
       <tbody>
+    </div>
     <?php
       // below looks complicated but its just to show hotel outputs from json
       foreach($valueHotel as $hotelOutput) :
@@ -102,7 +107,7 @@ $dailyRate = $valueHotel[$bookingJson[session_id()]['hotel']]['dailyRate'];
         {
     ?>
     <form action="code/updateBooking.php" method="post">
-      <tr>
+      <tr class="w3-hover-purple">
         <td>
           <?php echo $hotelOutput['hotel'];?>
           <input type="hidden" id="hotel" name="hotel" value=<?php echo $hotelOutput['hotel'];?>>
@@ -122,7 +127,7 @@ $dailyRate = $valueHotel[$bookingJson[session_id()]['hotel']]['dailyRate'];
         </td>
         <td>
           <input type="hidden" id="original" name="original" value="no">
-          <button type-type="submit">Select</button>
+          <button type-type="submit" class="w3-button w3-white">Select</button>
         </td>
       <tr>
     </form>
