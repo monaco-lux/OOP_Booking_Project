@@ -41,7 +41,9 @@ $dailyRate = $valueHotel[$bookingJson[session_id()]['hotel']]['dailyRate'];
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   </head>
   <body>
-   <h1>Results of Booking</h1>
+    <div class="w3-container w3-purple">
+      <h1>Results of Booking</h1>
+    </div>
     <hr>
     <h2>You are booking...</h2>
     <div class="w3-responsive">

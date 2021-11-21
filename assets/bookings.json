@@ -71,5 +71,41 @@
         "ratePerDay": "100",
         "total": "700",
         "session": "e4f6fd83ce434183d6076d8f97f722fd"
+    },
+    "d959d9807853d38e0c5a0c54b1041c52": {
+        "name": "1231",
+        "surname": "123123",
+        "email": "12312@email.com",
+        "checkIn": "2021-11-02",
+        "checkOut": "2021-11-18",
+        "hotel": "Hilton",
+        "daysStaying": "16",
+        "ratePerDay": "300",
+        "total": "4800",
+        "session": "d959d9807853d38e0c5a0c54b1041c52"
+    },
+    "01917482ef2f34a5a1aaba0deca6fbac": {
+        "name": "James",
+        "surname": "Kingston",
+        "email": "james@email.com",
+        "checkIn": "2021-11-22",
+        "checkOut": "2021-11-25",
+        "hotel": "ParkIn",
+        "daysStaying": "3",
+        "ratePerDay": "120",
+        "total": "360",
+        "session": "01917482ef2f34a5a1aaba0deca6fbac"
+    },
+    "973f961ede3fb3b7a9554bd5cd9bb067": {
+        "name": "Jnae",
+        "surname": "kignston",
+        "email": "123123@email.com",
+        "checkIn": "2021-11-12",
+        "checkOut": "2021-11-04",
+        "hotel": "Hilton",
+        "daysStaying": "8",
+        "ratePerDay": "300",
+        "total": "2400",
+        "session": "973f961ede3fb3b7a9554bd5cd9bb067"
     }
 }
