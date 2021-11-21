@@ -89,6 +89,7 @@ $dailyRate = $valueHotel[$bookingJson[session_id()]['hotel']]['dailyRate'];
       <thead>
         <th>Hotel</th>
         <th>Days Staying</th>
+        <th>Features</th>
         <th>Daily Rate</th>
         <th>Total to Pay</th>
         <th>Change values?</th>
@@ -110,6 +111,7 @@ $dailyRate = $valueHotel[$bookingJson[session_id()]['hotel']]['dailyRate'];
           <?php echo $bookingJson[session_id()]['daysStaying'];?>
           <input type="hidden" id="daysStaying" name="daysStaying" value=<?php echo $bookingJson[session_id()]['daysStaying'];?>>
         </td>
+        <td> <?php echo $hotelOutput['features']; ?></td>
         <td>
           <?php echo "R".$hotelOutput['dailyRate']; ?>
           <input type="hidden" id="dailyRate" name="dailyRate" value=<?php echo $hotelOutput['dailyRate'];?>>

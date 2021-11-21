@@ -19,6 +19,8 @@ $newBook->file= "../assets/bookings.json";
 $newBook->home = "Location: ../results.php";
 
 // this is used to pull data through from json
+
+
 if($newBook->name)
 {
   if(file_exists($newBook->file))
@@ -30,6 +32,7 @@ if($newBook->name)
       $bookingJson = [];
     }
   }
+
 
 // write back to array and associate with session_id()
   $bookingJson[session_id()] =

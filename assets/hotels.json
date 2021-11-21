@@ -1,18 +1,22 @@
 {
     "Marriot": {
         "hotel":"Marriot",
-        "dailyRate": 250
+        "dailyRate": 250,
+        "features": "Ocean view, Large Pool and top class Restaurants"
     },
     "Hilton": {
         "hotel":"Hilton",
-        "dailyRate": 300
+        "dailyRate": 300,
+        "features": "Free shuttle service, Pool, bar and Concierge"
     },
     "ParkIn": {
         "hotel":"ParkIn",
-        "dailyRate": 120
+        "dailyRate": 120,
+        "features": "No booking fee, easy access to airports and bar"
     },
     "CityLodge": {
         "hotel":"CityLodge",
-        "dailyRate": 100
+        "dailyRate": 100,
+        "features": "24hour service, quick turnaround and a pool"
     }
 }
