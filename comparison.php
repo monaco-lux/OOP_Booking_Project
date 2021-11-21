@@ -47,7 +47,9 @@ $dailyRate = $valueHotel[$bookingJson[session_id()]['hotel']]['dailyRate'];
       <h1>Comparison Page</h1>
     </div>
     <hr>
-    <h2>Original Choice</h2>
+    <div class="w3-container w3-black">
+      <h2>Original Choice</h2>
+    </div>
     <div class="w3-responsive">
       <table class="w3-table-all">
         <thead>
@@ -89,7 +91,9 @@ $dailyRate = $valueHotel[$bookingJson[session_id()]['hotel']]['dailyRate'];
       <tbody>
       </thead>
     </table>
-    <h3>Comparison Options</h3>
+    <div class="w3-container w3-black">
+      <h2>Comparison Options</h2>
+    </div>
     <div class="w3-responsive">
       <table class="w3-table-all">
         <thead>

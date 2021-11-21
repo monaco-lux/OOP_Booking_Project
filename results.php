@@ -45,7 +45,9 @@ $dailyRate = $valueHotel[$bookingJson[session_id()]['hotel']]['dailyRate'];
       <h1>Results of Booking</h1>
     </div>
     <hr>
-    <h2>You are booking...</h2>
+    <div class="w3-container w3-black">
+      <h2>You are booking...</h2>
+    </div>
     <div class="w3-responsive">
       <table class="w3-table-all">
         <thead>
@@ -61,7 +63,9 @@ $dailyRate = $valueHotel[$bookingJson[session_id()]['hotel']]['dailyRate'];
       <tbody>
     </div>
     <?php
+      // data is echoed in a foreach to output everything
       foreach($bookingJson as $bookingOutput) :
+        // ensure that output elements only match the session_id
         if($bookingOutput['session'] == session_id())
         {
     ?>
@@ -95,6 +99,7 @@ $dailyRate = $valueHotel[$bookingJson[session_id()]['hotel']]['dailyRate'];
           </td>
           <td>
             <form action="code/updateBooking.php" method="post">
+              <!-- The "original"  value ensures book is called-->
               <input type="hidden" id="original" name="original" value="yes">
               <button type-type="submit" class="w3-button w3-black">Book</button>
             </form>
