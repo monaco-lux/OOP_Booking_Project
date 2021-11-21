@@ -9,8 +9,45 @@ session_start(); //Initialize Session
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Hotel Booking Form</title>
-  <!-- <link rel="stylesheet" href="code/stylesheet.css"> -->
+  <!-- link to w3.css stylesheet as it offers better functionality that most -->
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <!-- include jquery dependencies -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <!-- Add required functionality for datepicker -->
+  <script>
+    var today = new Date(); // get the current date
+    var dd = today.getDate(); //get the day from today.
+    var mm = today.getMonth()+1; //get the month from today +1 because january is 0!
+    var yyyy = today.getFullYear(); //get the year from today
+
+    //if day is below 10, add a zero before (ex: 9 -> 09)
+    if(dd<10) {
+      dd='0'+dd
+    }
+
+  //like the day, do the same to month (3->03)
+    if(mm<10) {
+      mm='0'+mm
+    }
+
+  //finally join yyyy mm and dd with a "-" between then
+    today = yyyy+'-'+mm+'-'+dd;
+    function todayDate(){
+      document.getElementById("checkIn").setAttribute("min", today);
+    }
+
+    // make sure that you cannot choose any days before today
+    $(document).ready(function(){
+      $('#checkIn').attr('min', todayDate());
+    });
+
+    // set the choice for checkOut to any day from the chosen date
+    function setDate()
+    {
+      var minToDate = document.getElementById("checkIn").value;
+      document.getElementById("checkOut").setAttribute("min", minToDate);
+    }
+  </script>
 </head>
 <body>
   <script src="/code/scripts.js"></script>
@@ -54,6 +91,7 @@ session_start(); //Initialize Session
         name="checkIn" id="checkIn"
         required
         class="w3-input w3-border w3-round"
+        onBlur="setDate()"
         >
       </div>
       <div class="w3-third">
